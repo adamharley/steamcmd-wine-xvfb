@@ -1,7 +1,5 @@
 FROM wilkesystems/steamcmd
 
-ENV TIMEZONE=Europe/London
-
 RUN dpkg --add-architecture i386 && \
 	apt-get update && \
 	apt-get install -y apt-transport-https gnupg software-properties-common wget && \
