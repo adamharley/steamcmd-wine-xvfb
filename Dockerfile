@@ -10,6 +10,7 @@ RUN dpkg --add-architecture i386 && \
 	wget -O /usr/bin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks && \
 	chmod +x /usr/bin/winetricks && \
 	apt-get purge -y apt-transport-https gnupg software-properties-common && \
+	apt-get autoremove -y && \
 	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN winetricks -q sound=disabled
